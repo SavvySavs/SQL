@@ -1,0 +1,19 @@
+CREATE TABLE grocery_store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO grocery_store VALUES (1, "bananas", 3, 15, 4);
+INSERT INTO grocery_store VALUES (2, "peanut butter", 5, 10, 10);
+INSERT INTO grocery_store VALUES (3, "apples", 2, 15, 4);
+INSERT INTO grocery_store VALUES (4, "ice cream", 6, 20, 6);
+INSERT INTO grocery_store VALUES (5, "grape jelly", 4, 10, 10);
+INSERT INTO grocery_store VALUES (6, "chicken nuggets", 6, 10, 6);
+INSERT INTO grocery_store VALUES (7, "tums", 3, 20, 7);
+INSERT INTO grocery_store VALUES (8, "jelly donuts", 7, 10, 2);
+INSERT INTO grocery_store VALUES (9, "poptarts", 4, 10, 2);
+INSERT INTO grocery_store VALUES (10, "mini wheats", 3, 15, 2);
+INSERT INTO grocery_store VALUES (11, "fruit loops", 3, 15, 2)'
+INSERT INTO grocery_store VALUES (12, "cheerios", 3, 15, 2);
+INSERT INTO grocery_store VALUES (13, "crunchy peanut butter", 4, 10, 10);
+INSERT INTO grocery_store VALUES (14, "whipped cream", 2, 15, 6);
+INSERT INTO grocery_store VALUES (15, "sprinkles", 2, 15, 6);
+
+SELECT name, price, aisle FROM grocery_store WHERE aisle > 4 ORDER BY aisle;
