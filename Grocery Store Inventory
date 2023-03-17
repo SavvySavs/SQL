@@ -1,3 +1,5 @@
+--Create a grocery store inventory database
+
 CREATE TABLE grocery_store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
 
 INSERT INTO grocery_store VALUES (1, "bananas", 3, 15, 4);
@@ -15,5 +17,19 @@ INSERT INTO grocery_store VALUES (12, "cheerios", 3, 15, 2);
 INSERT INTO grocery_store VALUES (13, "crunchy peanut butter", 4, 10, 10);
 INSERT INTO grocery_store VALUES (14, "whipped cream", 2, 15, 6);
 INSERT INTO grocery_store VALUES (15, "sprinkles", 2, 15, 6);
+
+--display the database ordered by price
+
+SELECT * FROM grocery_store ORDER BY price;
+
+--what is the avg price of items in the bulk section?
+
+SELECT AVG(price) "avg bulk item price";
+
+--what are the 5 most stocked items?
+
+SELECT name, price, quantity FROM grocery_store ORDER BY quantity LIMIT 5;
+
+-- display the name, price and aisle from the database where the aisle is higher than 4, and ordered by the aisle number
 
 SELECT name, price, aisle FROM grocery_store WHERE aisle > 4 ORDER BY aisle;
